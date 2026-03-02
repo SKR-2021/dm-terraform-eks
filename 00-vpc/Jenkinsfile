@@ -22,31 +22,31 @@ pipeline {
     //     password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     // }
     // This is build section
-    stages {
-        stage('Init') {
-            steps {
-                script{
-                    withAWS(region:'us-east-1',credentials:'aws-creds') {
-                        sh """
-                            cd 00-vpc
-                            terraform init
-                        """
-                    }
-                }
-            }
-        }
-        stage('Plan') {
-            steps {
-                script{
-                    withAWS(region:'us-east-1',credentials:'aws-creds') {
-                        sh """
-                            cd 00-vpc
-                            terraform plan
-                        """
-                    }
-                }
-            }
-        }
+    // stages {
+    //     stage('Init') {
+    //         steps {
+    //             script{
+    //                 withAWS(region:'us-east-1',credentials:'aws-creds') {
+    //                     sh """
+    //                         cd 00-vpc
+    //                         terraform init
+    //                     """
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     stage('Plan') {
+    //         steps {
+    //             script{
+    //                 withAWS(region:'us-east-1',credentials:'aws-creds') {
+    //                     sh """
+    //                         cd 00-vpc
+    //                         terraform plan
+    //                     """
+    //                 }
+    //             }
+    //         }
+    //     }
         stage('Deploy') {
             input {
                 message "Should we continue?"
@@ -62,7 +62,7 @@ pipeline {
                     withAWS(region:'us-east-1',credentials:'aws-creds') {
                         sh """
                             cd 00-vpc
-                            terraform apply -auto-approve
+                            terraform destroy -auto-approve
                         """
                     }
                 }
