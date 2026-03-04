@@ -7,8 +7,8 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "remote-state-86s-dev"
-    key    = "roboshop-dev-eks"
+    bucket = "dotmart-remote-dev"
+    key    = "dotmart-dev-eks"
     region = "us-east-1"
     use_lockfile = true
     encrypt = true

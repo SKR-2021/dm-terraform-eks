@@ -1,5 +1,5 @@
 variable "project_name" {
-    default = "roboshop"
+    default = "dotmart"
 }
 
 variable "environment" {
@@ -7,9 +7,9 @@ variable "environment" {
 }
 
 variable "zone_id" {
-    default = "Z0948150OFPSYTNVYZOY"
+    default = "Z09150472BEG29NERJFM7"
 }
 
 variable "domain_name" {
-    default = "daws86s.fun"
+    default = "dso86s.xyz"
 }
