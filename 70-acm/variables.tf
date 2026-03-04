@@ -7,7 +7,7 @@ variable "environment" {
 }
 
 variable "domain_name" {
-    default = "daws86s.fun"
+    default = "dso86s.xyz"
 }
 
 variable "zone_id" {
