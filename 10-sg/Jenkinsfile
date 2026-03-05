@@ -98,24 +98,24 @@ pipeline {
                         }
                     }
                 }
-                stage('EKS'){
-                    steps {
-                        script {
-                            build job: '90-eks',
-                                wait: false, // Wait for completion
-                                propagate: false // Propagate status
-                        }
-                    }
-                }
-            }
-        }
-        stage('ALB'){
-            steps {
-                script {
-                    build job: '80-frontend-alb',
-                        wait: false, // Wait for completion
-                        propagate: false // Propagate status
-                }
+        //         stage('EKS'){
+        //             steps {
+        //                 script {
+        //                     build job: '90-eks',
+        //                         wait: false, // Wait for completion
+        //                         propagate: false // Propagate status
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        // stage('ALB'){
+        //     steps {
+        //         script {
+        //             build job: '80-frontend-alb',
+        //                 wait: false, // Wait for completion
+        //                 propagate: false // Propagate status
+        //         }
             }
         }
 
