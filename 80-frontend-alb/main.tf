@@ -79,7 +79,7 @@ resource "aws_lb_listener_rule" "frontend" {
 
   condition {
     host_header {
-      values = ["${var.environment}.${var.domain_name}"] # dev.daws86s.fun
+      values = ["${var.environment}.${var.domain_name}"] # dev.dso86s.xyz
     }
   }
 }

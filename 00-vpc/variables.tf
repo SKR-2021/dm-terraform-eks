@@ -3,7 +3,7 @@ variable "vpc_cidr" {
 }
 
 variable "project_name" {
-  default = "roboshop"
+  default = "dotmart"
 }
 
 variable "environment" {
@@ -12,7 +12,7 @@ variable "environment" {
 
 variable "vpc_tags" {
   default = {
-    Purpose    = "roboshop-VPC"
+    Purpose    = "dotmart-VPC"
     DontDelete = "true"
   }
 }
